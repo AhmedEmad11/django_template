@@ -3,7 +3,7 @@ from rest_framework.serializers import ModelSerializer
 
 class UserSerializer(ModelSerializer):
     class Meta:
-        model = User.objects.all()
+        model = User
         fields = ["id", "username", "password"]
         extra_kwargs = {"password": {"write_only": True}}
         
